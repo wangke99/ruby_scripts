@@ -11,7 +11,7 @@ open(source) do |info|
   content=info.read
 end
 
-#<3>
+#<3> option to see and description or not
 rss=RSS::Parser.parse(content, false)
 
 print "Do you want to see feed description (y/n)?"
@@ -24,7 +24,7 @@ puts "DESCRIPTION: #{rss.channel.description}"
 puts "LINK: #{rss.channel.link}"
 puts "PUBLICATION DATE: #{rss.channel.date} \n\n"
 
-#<4>
+#<4> show each items in the feed
 rss.items.size.times do |i|
   puts "#{rss.items[i].date}...#{rss.items[i].title}"
   if desc
