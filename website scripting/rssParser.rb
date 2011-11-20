@@ -6,7 +6,7 @@ require 'open-uri'
 source='http://online.wsj.com/xml/rss/3_8068.xml'
 content=''
 
-#<2>
+#<2> read in all information from source
 open(source) do |info|
   content=info.read
 end
